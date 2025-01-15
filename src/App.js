@@ -1,6 +1,6 @@
 import MainPage from "./pages/mainPage/MainPage";
 import { useState } from "react";
-import AboutPage from "./components/aboutPage/AboutPage";
+import ErrorPage from "./components/errorPage/ErrorPage";
 import "./App.css";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 
     return (
         <div className="App">
-            {authorized ? <MainPage user={user} /> : <AboutPage user={user} />}
+            {authorized ? <MainPage user={user} /> : <ErrorPage user={user} />}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-function AboutPage({ user }) {
+function ErrorPage({ user }) {
     const [userAuthorized, setUserAuthorized] = useState({ name: "", lastname: "" });
 
     useEffect(() => {
@@ -16,4 +16,4 @@ function AboutPage({ user }) {
     );
 }
 
-export default AboutPage;
+export default ErrorPage;
