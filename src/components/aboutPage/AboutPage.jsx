@@ -1,10 +1,17 @@
+import {useState, useEffect} from "react";
 
+function AboutPage({ user }) {
+    const [userAuthorized, setUserAuthorized] = useState({ name: "", lastname: "" });
 
-function AboutPage({info}) {
+    useEffect(() => {
+        setUserAuthorized(user);
+    }, [user]);
+
     return (
         <div>
-            <h2>{info.title}</h2>
-            <p>{info.body}</p>
+            <h1>
+                Тебе сюда нельзя - {userAuthorized.name} {userAuthorized.lastname}
+            </h1>
         </div>
     );
 }
